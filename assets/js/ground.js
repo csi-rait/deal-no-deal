@@ -81,7 +81,7 @@ function take_deal(id){
         success: function (resp) {
             resp = JSON.parse(resp);
             if(resp.success =='success'){
-                alert('Your final amount is $' + resp.amount +'Thank you for playing!');
+                alert('Your final amount is $' + resp.amount + ' Thank you for playing!');
                 window.location = '../../leaderboard';
             }
         }
@@ -99,7 +99,6 @@ function finalround(id,case_no){
             'case_no':case_no
         },
         success: function (resp) {
-            //alert(resp);
             resp = JSON.parse(resp);
             if(resp.success =='success'){
                 alert('Your final score is $' + resp.amount +'Thank you for playing!');
@@ -118,7 +117,6 @@ function select(id, case_no){
             'case_no':case_no
         },
         success: function (resp) {
-       //     alert(resp);
             reload_cases(id);
             reload_costs(id);
         }
