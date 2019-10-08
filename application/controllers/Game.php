@@ -225,8 +225,6 @@ Class Game extends CI_Controller {
         $amounts = array(50,75,100,200,300,500,1000,2000,2500,5000,7500,10000,20000,25000,50000,60000,75000,100000,200000,250000,300000,500000,600000,700000,750000,1000000);
         $cases = $amounts;
         foreach($cases as $case){
-            //echo $case.",";
-
             if(in_array($case,$data)){
                 
                 $response .= "<button class=\"btn btn-lg btn-success m-5\" >$".number_format($case)."</button>";

@@ -10,8 +10,7 @@ Class game_management extends CI_Model{
         $entry['round'] = $data['round'];
         $entry['kept'] = $data['kept'];
         $entry['active'] = $data['active'];
-       // $entry['final_amount'] = 0;
-        //$entry['player'] = 'Not Assigned';
+
         $this->db->where('uid',1);
         if($this->db->update($table_name,$entry)){
             return true;
