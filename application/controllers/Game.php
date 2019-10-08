@@ -186,7 +186,7 @@ Class Game extends CI_Controller {
 
         $response .= "<h2> <span class=\"pull-left\">You have been given <button  class=\"btn btn-lg btn-default  m-5\" >Case ".$kept."</button> </span> <span class=\"pull-right\"> Current Offer: $".number_format($offer)."</span> </h2><br>";
         $response .= "<div class=\"col-sm-12\"><h1 >Select $remain case$s</h1>";
-        for($i=0; $i<26; $i++){
+        for($i=0; $i<30; $i++){
             $case_no = $i+1;
             if($kept==$i+1){
                 continue;
@@ -222,7 +222,8 @@ Class Game extends CI_Controller {
         unset($data['final_amount']);
         $response = '';
         $response = "<h1>Remaining amounts</h1>";
-        $cases = array(50,75,100,200,300,500,1000,2000,2500,5000,7500,10000,20000,25000,50000,60000,75000,100000,200000,250000,300000,500000,600000,700000,750000,1000000);
+        $amounts = array(50,75,100,200,300,500,1000,2000,2500,5000,7500,10000,20000,25000,50000,60000,75000,100000,200000,250000,300000,500000,600000,700000,750000,1000000);
+        $cases = $amounts;
         foreach($cases as $case){
             //echo $case.",";
 
