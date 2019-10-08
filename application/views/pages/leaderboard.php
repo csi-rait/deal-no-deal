@@ -33,8 +33,5 @@ if (!isset($this->session->userdata['logged_in'])) {
     
 </div>
 <script>
-    //get_leaderboard();
-    window.setInterval(function(){
-        get_leaderboard();
-    },1000);
+
 </script>

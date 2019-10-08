@@ -122,3 +122,8 @@ function select(id, case_no){
         }
     });
 }
+
+    //get_leaderboard();
+    window.setInterval(function(){
+        get_leaderboard();
+    },1000);
