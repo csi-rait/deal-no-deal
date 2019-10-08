@@ -33,7 +33,6 @@ Class Auth extends CI_Controller {
             if ($result == TRUE) {
             
             $username = $this->input->post('username');
-            $result = $this->login_database->read_user_information($username);
           // print_r($result);
             if ($result != false) {
             $session_data = array(
@@ -44,7 +43,7 @@ Class Auth extends CI_Controller {
            //print_r($session_data);
             //Add user data in session
             $this->session->set_userdata('logged_in', $session_data);
-            redirect('/cpanel');
+
             }
             }else{
                 $data['error'] = "Incorrect Details";
